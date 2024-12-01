@@ -3,7 +3,7 @@
 ## Table of contents
 <!--ts-->
 
-* [Hardware requirments](#hardware-requirments)
+* [Hardware requirements](#hardware-requirments)
 * [HTTP API Service](#http-api-service)
     * [Endpoints](#endpoints)
     * [Implementation Details](#implementation-details)
@@ -12,7 +12,7 @@
     * [Cluster deploy](#cluster-deploy)
 <!--te-->
 
-## Hardware requirments
+## Hardware requirements
 
 |Component|RAM | Disk space | Description|
 |--|--|--|--|
@@ -127,7 +127,7 @@ docker swarm init --advertise-addr <management_node_ip>
  docker swarm join --token <token> <management_node_ip>:2377
  ```
  5. Change the value of the `replicas` parameter in `docker-stack.yml` for `sign_prover` service to 2 replicas per worker node not considering the management node.
- 6. Set url to nats server & your Etherium private key for `http_service`:
+ 6. Set url to nats server & your Ethereum private key for `http_service`:
  ```bash
  export NATS_URL=nats://127.0.0.1:4222
  export PRIVATE_KEY=9c6293889cac472edd54fc057cc47999a1d9c9c42a009731908a2a821a3ec5da
